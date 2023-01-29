@@ -1,0 +1,164 @@
+html {
+  scroll-behavior: smooth;
+}
+body{
+    font-family: 'Courgette', cursive;
+}
+#background-video {
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    z-index: -1;
+    opacity: 0.7;
+  }
+  #heading{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 35px;
+    margin-top: 25px;
+    
+}
+#heading button{
+    height: 68px;
+    width: 250px;
+    margin-top: 182px;
+    font-size: 25px;
+    border-radius: 12px;
+    background-color: rgb(35, 27, 7);
+    border-color: rgb(250, 249, 248);
+    color: aliceblue;
+    font-family: 'Courgette', cursive;
+    transition: all 0.3s ;
+
+}
+
+  @media (max-width: 350px) {
+    #background-video { display: none; }
+    body {
+      background: url("https://assets.codepen.io/6093409/river.jpg") no-repeat;
+      background-size: cover;
+    }
+}
+#r1{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  margin-left: 576px;
+  padding: 24px;
+  height: 501px;
+  width: 444px;
+  border: 2px solid rgb(52, 51, 51);
+  border-radius: 9px;
+  z-index: -1;
+}
+#r1 input{
+  display: flex;
+  padding-left: 40px;
+  height: 43px;
+  width: 416px;
+  font-size: 16px;
+  border: 2px solid rgba(132, 85, 203, 0.829);
+  border-radius: 12px;
+}
+#r1 input:hover{
+  border-color: rgb(38, 93, 175);
+}
+#sec1{
+  height: 46px;
+  width: 267px;
+  font-size: 18px;
+  border-radius: 12px;
+  background-color: rgb(24, 133, 216);
+  border-color: blueviolet;
+  margin-top: 12px;
+  font-weight: bolder;
+  color: aliceblue;
+  cursor: pointer;
+
+}
+#sec1:hover{
+  color: blue;
+}
+#sec2{
+ display: block;
+  margin-bottom: 50px;
+  height: 55px;
+  width: 240px;
+  font-size: 20px;
+  padding-top: 4px;
+  font-weight:bolder;
+  background-color: green;
+  border-color: green;
+  border-radius: 9px;
+  color: aliceblue;
+  cursor: pointer;
+
+}
+#sec2:hover{
+  background-color: rgb(45, 223, 45);
+}
+#r1 a{
+  text-decoration: none;
+}
+#r1 a:hover{
+  color: rgb(11, 5, 58);
+}
+#r1 hr{
+  width: 414px;
+  background-color: black;
+}
+.left{
+   font-size: 30px;
+   display: block;
+   margin-top: 450px;
+   text-shadow: 4px 4px 8px #f96b24;
+}
+@media screen and (max-width: 450px)  {
+  #r1{
+    width: 280px;
+    height: 450px;
+    margin-left: 0px;
+  }
+  #r1 input{
+    width: 250px;
+    height: 33px;
+    padding: 0px;
+  }
+  #sec1{
+    width: 250px;
+    height: 30px;
+  }
+  #r1 hr{
+    width: 250px;
+  }
+  #heading{
+    font-size: 12px;
+  }
+  .left{
+font-size: 12px;
+  }
+}
+#heading button
+{
+    position: relative;
+}
+#heading{
+    font-size:35px
+}
+#heading button:hover{
+background-image: linear-gradient(90deg,#f96b24,#ff9100);
+transition: all 0.3s ease-in-out;
+transform: scale(1.15);
+}
+#heading,.left{
+text-shadow: 4px 4px 8px #f96b24;
+}
