@@ -1,6 +1,6 @@
 const mongoose = require('mongoose');
 
-mongoose.connect('mongodb://localhost/back-track');
+mongoose.connect(process.env.MONGODB_URL);
 
 const db = mongoose.connection;
 
