@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>login</title>
+</head>
+<style>
+    #heading button
+    {
+        position: relative;
+    }
+    #heading{
+        font-size:35px
+    }
+ #heading button:hover{
+  background-image: linear-gradient(90deg,#f96b24,#ff9100);
+  transition: all 0.3s ease-in-out;
+  transform: scale(1.15);
+}
+#heading,.left{
+    text-shadow: 4px 4px 8px #f96b24;
+}
+</style>
+<body>
+    <div  id="heading"><h1>Welcome To The CodeExpert Platform</h1>
+        <button id="sec1" onclick="scrollWin()">Getting Start</button></div>
+   
+<video id="background-video" autoplay loop muted poster="vk.jpg">
+    <source src="videos/vk.mp4" type="video/mp4">
+    </video>
+    <a href="sec1"></a>
+    
+    <div>
+        <div class="left"><h1> Log In To CodeExpert Platform</h1></div>
+        <form action="/create-session" id="r1" method ="post">
+        <input type="text" placeholder="Email Address" name="email" required >
+        <input type="password" placeholder="Password" name="password" required >
+        <button id="sec1" > Log In</button>
+        <div class="or-container"><div class="line-separator"></div> <div class="or-label">or</div><div class="line-separator"></div></div>
+        <div class="row">
+            <div class="col-md-12">
+              <a class="btn btn-lg btn-google btn-block text-uppercase btn-outline" href="/auth/google"><img src="https://img.icons8.com/color/16/000000/google-logo.png"> Signup Using Google</a>
+
+            </div>
+        </div>
+        <a href="/forget-password">Forgotten Password?</a>
+        <hr>
+        <button id="sec2" onclick="window.location.href='/singup'">Create New Account</button>
+      
+    </form></div>
+    <script>
+        function scrollWin() {
+  window.scrollBy(0, 1000);
+}
+    </script>
+    
+</body>
+</html>
