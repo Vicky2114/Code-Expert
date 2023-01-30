@@ -33,7 +33,7 @@ app.set('views', './views');
 app.use(session({
     name: 'CodeExpert',
     // TODO change the secret before deployment in production mode
-    secret: 'blahsomething',
+    secret: process.env.session_key,
     saveUninitialized: false,
     resave: false,
     cookie: {
