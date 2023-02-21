@@ -1,6 +1,6 @@
 const mongoose = require('mongoose');
 
-mongoose.connect('mongodb+srv://vicky:vicky@cluster0.syoeipa.mongodb.net/back-track?retryWrites=true&w=majority');
+mongoose.connect(process.env.MONGODB_URL);
 
 const db = mongoose.connection;
 
