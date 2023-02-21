@@ -32,15 +32,17 @@ app.set('views', './views');
 app.use(session({
     name: 'codeial',
     // TODO change the secret before deployment in production mode
-    secret: 'blasomething',
+    secret: 's%3AtZ7snx1PmIS0rX8NmS6aGUHkG70T7jd-.6QrkcX4xY67wGwZ6%2FOuvTw5yboWDo3L1XOkIEFz9TgA',
+   resave: false,
     saveUninitialized: false,
-    resave: false,
+    
     cookie: {
         maxAge: (1000 * 60 * 100)
     },
     store: new MongoStore(
         {
             mongooseConnection: db,
+            collection: 'sessions',
             autoRemove: 'disabled'
         
         },

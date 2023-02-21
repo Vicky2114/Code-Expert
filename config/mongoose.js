@@ -1,6 +1,6 @@
 const mongoose = require('mongoose');
 
-mongoose.connect('mongodb://localhost/back-track');
+mongoose.connect('mongodb+srv://vicky:vicky@cluster0.syoeipa.mongodb.net/back-track?retryWrites=true&w=majority');
 
 const db = mongoose.connection;
 
@@ -13,3 +13,5 @@ db.once('open', function(){
 
 
 module.exports = db;
+
+//gMahMqkZuG1dnkBp

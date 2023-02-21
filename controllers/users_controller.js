@@ -33,7 +33,7 @@ module.exports.create=function(req,res){
             return;
         }
         if(!user){
-            User.create({FirstName:req.body.firstName,
+           User.create({FirstName:req.body.firstName,
                 LastName:req.body.lastName,
                 gender:req.body.gender,
                 email:req.body.email,
