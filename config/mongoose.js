@@ -1,6 +1,7 @@
 const mongoose = require('mongoose');
 
-mongoose.connect(process.env.MONGODB_URL||'mongodb+srv://vicky:vicky@cluster0.syoeipa.mongodb.net/back-track?retryWrites=true&w=majority');
+require('dotenv').config()
+mongoose.connect('mongodb://localhost/back-track');
 
 const db = mongoose.connection;
 

@@ -35,13 +35,14 @@
 
 <div class="account-form">
 
+   <div> <h2>Hi,<%= user.FirstName %></h2></div>
    <div id="close-form" class="fas fa-times"></div>
 
    <div class="buttons">
       <a href ="/sign-out" class="btn active login-btn btn-lg">logout</a>
    </div>
    <div class="buttons">
-      <a href ="#"class="btn register-btn btn-lg">profile settings</a>
+      <a href ="/profile/<%=user.id%>"class="btn register-btn btn-lg">profile settings</a>
    </div>
    
 
@@ -255,7 +256,7 @@
 
    </div>
 
-   <div class="credit"> created by <span>mr. web designer</span> | all rights reserved! </div>
+   <div class="credit"> created by <span>VK2114</span> | all rights reserved! </div>
 
 </section>
 

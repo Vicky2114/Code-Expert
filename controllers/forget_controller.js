@@ -6,7 +6,10 @@ const JWT_SECRET='hi some super secret...'
 
 module.exports.ren=function(req,res){
     console.log('done');
-    return res.render('forget_password');
+    return res.render('forget_password',{isprofilepage:false,
+    homepage:false,
+    reset:false,
+    loginpage:false,});
 }
 
 
@@ -28,7 +31,8 @@ module.exports.forgetpass=async function(req,res){
         }
         const token=jwt.sign(payload,secret,{expiresIn:'10000000'})
        // jwt.sign(user.toJSON(), 'codeial', {expiresIn:  '100000'})
-        const link=`http://localhost:8000/forget-password/reset-password/${user.id}/${token}`
+        //const link=`http://localhost:8000/forget-password/reset-password/${user.id}/${token}`
+        const link=`https://code-expert-djlq.onrender.com/forget-password/reset-password/${user.id}/${token}`
         //mail processs
         nodemailer.transporter.sendMail({
         from:'vr6994056@gmail.com',
@@ -57,7 +61,10 @@ module.exports.resetpassword=async function(req,res){
      const secret=JWT_SECRET+user.password;
      try{
        const payload=jwt.verify(token,secret)
-       res.render('reset_password',{email:user.email})
+       res.render('reset_password',{email:user.email,isprofilepage:false,
+        homepage:false,
+        reset:true,
+        loginpage:false,})
      }catch(error){
         console.log(error.message);
         res.send(error.message);
@@ -89,7 +96,7 @@ module.exports.reset=async function(req,res){
       console.log(user);
       user.save();
       req.flash('success', 'password reset');
-      res.redirect('http://localhost:8000/sign_in');
+      res.redirect('https://code-expert-djlq.onrender.com/sign_in');
      }catch(error){
         console.log(error.message);
         res.send(error.message);
