@@ -29,7 +29,7 @@ module.exports.forgetpass=async function(req,res){
             email:user.email,
             id:user.id
         }
-        const token=jwt.sign(payload,secret,{expiresIn:'10000000000'})
+        const token=jwt.sign(payload,secret,{expiresIn:'100000'})
        // jwt.sign(user.toJSON(), 'codeial', {expiresIn:  '100000'})
         //const link=`http://localhost:8000/forget-password/reset-password/${user.id}/${token}`
         const link=`http://code-expert-djlq.onrender.com/forget-password/reset-password/${user.id}/${token}`
