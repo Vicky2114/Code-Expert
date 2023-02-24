@@ -32,7 +32,7 @@ module.exports.forgetpass=async function(req,res){
         const token=jwt.sign(payload,secret,{expiresIn:'10000000'})
        // jwt.sign(user.toJSON(), 'codeial', {expiresIn:  '100000'})
         //const link=`http://localhost:8000/forget-password/reset-password/${user.id}/${token}`
-        const link=`https://code-expert-djlq.onrender.com/forget-password/reset-password/${user.id}/${token}`
+        const link=`http://code-expert-djlq.onrender.com/forget-password/reset-password/${user.id}/${token}`
         //mail processs
         nodemailer.transporter.sendMail({
         from:'vr6994056@gmail.com',
@@ -96,7 +96,7 @@ module.exports.reset=async function(req,res){
       console.log(user);
       user.save();
       req.flash('success', 'password reset');
-      res.redirect('https://code-expert-djlq.onrender.com/sign_in');
+      res.redirect('http://code-expert-djlq.onrender.com/sign_in');
      }catch(error){
         console.log(error.message);
         res.send(error.message);
