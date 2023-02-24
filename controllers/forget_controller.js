@@ -1,7 +1,7 @@
 const jwt=require('jsonwebtoken');
 const User=require('../models/user');
 const nodemailer=require('../config/nodemailer');
-const JWT_SECRET='hi some super secret...'
+const JWT_SECRET=process.env.JWT_SECRET;
 
 
 module.exports.ren=function(req,res){
@@ -29,7 +29,7 @@ module.exports.forgetpass=async function(req,res){
             email:user.email,
             id:user.id
         }
-        const token=jwt.sign(payload,secret,{expiresIn:'10000000'})
+        const token=jwt.sign(payload,secret,{expiresIn:'10000000000'})
        // jwt.sign(user.toJSON(), 'codeial', {expiresIn:  '100000'})
         //const link=`http://localhost:8000/forget-password/reset-password/${user.id}/${token}`
         const link=`http://code-expert-djlq.onrender.com/forget-password/reset-password/${user.id}/${token}`
@@ -96,7 +96,8 @@ module.exports.reset=async function(req,res){
       console.log(user);
       user.save();
       req.flash('success', 'password reset');
-      res.redirect('http://code-expert-djlq.onrender.com/sign_in');
+      //res.redirect('http://code-expert-djlq.onrender.com/sign_in');
+      res.redirect('/sign_in');
      }catch(error){
         console.log(error.message);
         res.send(error.message);
