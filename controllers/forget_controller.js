@@ -1,7 +1,7 @@
 const jwt=require('jsonwebtoken');
 const User=require('../models/user');
 const nodemailer=require('../config/nodemailer');
-const JWT_SECRET=process.env.JWT_SECRET;
+const JWT_SECRET='vickyrawathi';
 
 
 module.exports.ren=function(req,res){
