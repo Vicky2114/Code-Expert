@@ -1,7 +1,7 @@
 const jwt=require('jsonwebtoken');
 const User=require('../models/user');
 const nodemailer=require('../config/nodemailer');
-const JWT_SECRET='vickyrawathi';
+const JWT_SECRET='n2r5u8x/A?D(G+KbPeShVkYp3s6v9y$B';
 
 
 module.exports.ren=function(req,res){
@@ -29,10 +29,10 @@ module.exports.forgetpass=async function(req,res){
             email:user.email,
             id:user.id
         }
-        const token=jwt.sign(payload,secret,{expiresIn:'100000'})
+        const token=jwt.sign(payload,secret,{expiresIn:'1hr'})
        // jwt.sign(user.toJSON(), 'codeial', {expiresIn:  '100000'})
         //const link=`http://localhost:8000/forget-password/reset-password/${user.id}/${token}`
-        const link=`http://code-expert-djlq.onrender.com/forget-password/reset-password/${user.id}/${token}`
+       const link=`http://code-expert-djlq.onrender.com/forget-password/reset-password/${user.id}/${token}`
         //mail processs
         nodemailer.transporter.sendMail({
         from:'vr6994056@gmail.com',
