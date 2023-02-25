@@ -1,7 +1,7 @@
 const mongoose = require('mongoose');
 
 require('dotenv').config()
-mongoose.connect(process.env.MONGODB_URL||'mongodb://localhost/back-track');
+mongoose.connect(process.env.MONGODB_URL);
 
 const db = mongoose.connection;
 
